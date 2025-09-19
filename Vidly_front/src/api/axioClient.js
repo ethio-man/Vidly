@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const axioClient = axios.create({ baseURL: "http://localhost:3000/api" });
+const axioClient = axios.create({ baseURL: "https://vidly-xrqm.onrender.com/api" });
 
 axioClient.interceptors.request.use(
   (config) => {
