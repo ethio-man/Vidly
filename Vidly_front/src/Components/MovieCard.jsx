@@ -51,8 +51,8 @@ export function Card({ movie, genres, index, refresh, setRefresh }) {
 export function NewCard({ genres, refresh, setRefresh }) {
   const [title, setTitle] = useState("");
   const [genreId, setId] = useState("");
-  const [numberInStock, setAmount] = useState(0);
-  const [dailyRentalRate, setRate] = useState(0);
+  const [numberInStock, setAmount] = useState();
+  const [dailyRentalRate, setRate] = useState();
   const [file, setFile] = useState(null);
   async function handleSave() {
     try {
@@ -63,6 +63,9 @@ export function NewCard({ genres, refresh, setRefresh }) {
         dailyRentalRate,
       });
       setRefresh(refresh + 1);
+      setTitle("");
+      setAmount("");
+      setRate("");
     } catch (err) {
       if (err.status === 400) alert("Invalid data.");
       if (err.status === 404) alert("Please choose Genre");
@@ -75,6 +78,7 @@ export function NewCard({ genres, refresh, setRefresh }) {
       <input
         type="text"
         placeholder="Movie title"
+        value={title}
         className="bg-slate-400 px-2 rounded text-lg text-slate-600"
         onChange={(e) => setTitle(e.target.value)}
       />
@@ -93,12 +97,14 @@ export function NewCard({ genres, refresh, setRefresh }) {
         <input
           type="number"
           placeholder="Number in stock"
+          value={numberInStock}
           className="bg-slate-400 w-43 m-2 px-2 text-lg text-slate-600 rounded"
           onChange={(e) => setAmount(e.target.value)}
         />
         <input
           type="number"
           placeholder="Daily rental rate"
+          value={dailyRentalRate}
           className="bg-slate-400 w-40 px-2 text-lg text-slate-600 rounded"
           onChange={(e) => setRate(e.target.value)}
         />

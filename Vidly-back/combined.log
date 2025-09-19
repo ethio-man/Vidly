@@ -273,3 +273,5 @@
 {"level":"error","message":"Cannot read properties of null (reading '_id')","service":"user-service","stack":"TypeError: Cannot read properties of null (reading '_id')\n    at file:///C:/Users/Nati/OneDrive/Desktop/modules/BackEnd/Node%20workspace/genres-Endpoint/routes/movies.js:28:18\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2025-09-18T14:57:29.381Z"}
 {"level":"info","message":"listening to the port 3000...","service":"user-service","timestamp":"2025-09-18T15:54:57.681Z"}
 {"level":"info","message":"Successfuly connected to mongodb+srv://natymiskir:lkJrWirI1iqpEcgi@vidly.nud8xix.mongodb.net/?retryWrites=true&w=majority&appName=vidly.","service":"user-service","timestamp":"2025-09-18T15:55:00.516Z"}
+{"level":"info","message":"listening to the port 3000...","service":"user-service","timestamp":"2025-09-19T12:49:34.490Z"}
+{"level":"info","message":"Successfuly connected to mongodb+srv://natymiskir:lkJrWirI1iqpEcgi@vidly.nud8xix.mongodb.net/?retryWrites=true&w=majority&appName=vidly.","service":"user-service","timestamp":"2025-09-19T12:49:37.491Z"}

@@ -15,6 +15,7 @@ export function NewCard({ refresh, setRefresh }) {
       try {
         await Genre.addGenre({ name });
         setRefresh(refresh + 1);
+        setName("");
       } catch (err) {
         if (err.status === 401) alert("⚠️ Unauthorized");
         if (err.status === 400) alert(err.message);
@@ -26,6 +27,7 @@ export function NewCard({ refresh, setRefresh }) {
       <input
         className="bg-cyan-200 rounded-full px-3 m-2 w-32"
         type="text"
+        value={name}
         placeholder="New genre"
         onChange={(e) => setName(e.target.value)}
       />

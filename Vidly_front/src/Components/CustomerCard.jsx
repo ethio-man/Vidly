@@ -5,7 +5,6 @@ export function NewCustomer({ refresh, setRefresh }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isGold, setType] = useState(false);
-
   async function handleSave() {
     const data = {
       name,
@@ -15,6 +14,9 @@ export function NewCustomer({ refresh, setRefresh }) {
     try {
       await Customers.createCustomer(data);
       setRefresh(refresh + 1);
+      setName("");
+      setPhone("");
+      setType(false);
     } catch (err) {
       alert("Customer not created please try again");
       console.log("error", err);
@@ -24,19 +26,25 @@ export function NewCustomer({ refresh, setRefresh }) {
     <div className="flex justify-around items-center bg-slate-400/50 text-slate-800   m-16 py-6 rounded-lg">
       <input
         type="text"
+        value={name}
         placeholder="Name"
         className="bg-slate-300 px-2 py-1 rounded-lg"
         onChange={(e) => setName(e.target.value)}
       />
       <input
         type="tel"
+        value={phone}
         placeholder="☎️+251..."
         className="bg-slate-300 px-2 py-1 rounded-lg"
         onChange={(e) => setPhone(e.target.value)}
       />
       <div>
         <label className="text-amber-300 m-2">IsGold</label>
-        <input type="checkbox" onChange={() => setType(true)} />
+        <input
+          type="checkbox"
+          checked={isGold}
+          onChange={() => setType(true)}
+        />
       </div>
       <button
         type="submit"
