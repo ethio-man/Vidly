@@ -1,0 +1,4 @@
+{"level":"info","message":"listening to the port 3000...","service":"user-service","timestamp":"2025-09-21T15:27:18.633Z"}
+{"level":"info","message":"Successfuly connected to mongodb+srv://natymiskir:lkJrWirI1iqpEcgi@vidly.nud8xix.mongodb.net/?retryWrites=true&w=majority&appName=vidly.","service":"user-service","timestamp":"2025-09-21T15:27:21.389Z"}
+{"level":"info","message":"listening to the port 3000...","service":"user-service","timestamp":"2025-09-24T09:49:23.812Z"}
+{"level":"info","message":"Successfuly connected to mongodb+srv://natymiskir:lkJrWirI1iqpEcgi@vidly.nud8xix.mongodb.net/?retryWrites=true&w=majority&appName=vidly.","service":"user-service","timestamp":"2025-09-24T09:49:56.327Z"}

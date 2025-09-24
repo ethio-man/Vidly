@@ -23,12 +23,12 @@ export function NewCustomer({ refresh, setRefresh }) {
     }
   }
   return (
-    <div className="flex justify-around items-center bg-slate-400/50 text-slate-800   m-16 py-6 rounded-lg">
+    <div className="flex flex-col sm:flex-row justify-around items-center bg-slate-400/50 text-slate-800  m-16 p-2 py-6 rounded-lg">
       <input
         type="text"
         value={name}
         placeholder="Name"
-        className="bg-slate-300 px-2 py-1 rounded-lg"
+        className="bg-slate-300 px-2 m-1 py-1 rounded-lg"
         onChange={(e) => setName(e.target.value)}
       />
       <input
@@ -81,7 +81,7 @@ export function Card({
   const text = customer.isGold ? "text-amber-100" : "text-slate-300";
   return (
     <div
-      className={`flex justify-around items-center ${background} ${text}  m-16 py-4 rounded-lg`}
+      className={`flex flex-col sm:flex-row justify-around pl-[25%] sm:pl-0 sm:items-center ${background} ${text}  m-16 py-4 rounded-lg`}
     >
       <p>{customer.name}</p>
       <p>{customer.phone}</p>

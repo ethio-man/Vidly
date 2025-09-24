@@ -24,9 +24,9 @@ export default function registrationForm({ isdisplay, setDisplay, className }) {
     <>
       {isdisplay && (
         <div className={className}>
-          <div className="flex flex-col justify-between text-center w-72 h-80 bg-gradient-to-b from-sky-600/30 to-indigo-500/30 via-purple-400/30 text-blue-600 p-8 m-32 rounded-lg">
+          <div className="flex flex-col justify-between text-center w-72 h-80 bg-gradient-to-b from-sky-600/30 to-indigo-500/30 via-purple-400/30 text-blue-600 p-8 m-32 rounded-lg bg-center backdrop-blur-sm">
             <p className="font-bold text-sky-50 text-xl "> Sign Up</p>
-            <div className="shadow-xl bg-white rounded-full py-2 items-center">
+            <div className="flex justify-around shadow-xl bg-white rounded-full py-2 ">
               <label>👤</label>
               <input
                 type="text"
@@ -34,7 +34,7 @@ export default function registrationForm({ isdisplay, setDisplay, className }) {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className="shadow-xl  bg-white rounded-full py-2 items-center">
+            <div className="flex justify-around shadow-xl  bg-white rounded-full py-2 ">
               <label>📩</label>
               <input
                 type="email"
@@ -43,7 +43,7 @@ export default function registrationForm({ isdisplay, setDisplay, className }) {
               />
             </div>
 
-            <div className="shadow-xl  bg-white rounded-full py-2 items-center">
+            <div className="flex justify-around shadow-xl  bg-white rounded-full py-2 ">
               <label>🔏</label>
               <input
                 type="password"

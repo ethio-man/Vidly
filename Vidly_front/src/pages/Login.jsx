@@ -44,8 +44,7 @@ function Login({ setAuth }) {
       <RegistrationForm
         isdisplay={isdisplay1}
         setDisplay={setDisplay1}
-        className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 
-              text-white p-6    bg-center backdrop-blur-sm  rounded "
+        className="fixed inset-0 flex items-center justify-center p-4 sm:p-6 z-50"
       />
       <LoginForm
         isdisplay={isdisplay2}
